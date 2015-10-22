@@ -1,7 +1,7 @@
-# nstat
+# pstat
 monitor network,record packet base ports or ip address. this software need libpcap.
 Usage:
-  pstat64 [-f <defaults file>] [-i <local nets>] [-d <data dir>] [-e] [-g <core>] [-n mode] [-i <iface|pcap file>]  [-d <path>] 
+  pstat [-f <defaults file>] [-i <local nets>] [-d <data dir>] [-e] [-g <core>] [-n mode] [-i <iface|pcap file>]  [-d <path>] 
          [-r <redis>] [-v] [-x ] [-C] [-p] [-w] [-B <filter>] [-A <mode>] [-c <ip>] [-s <length>]
 
 Options:
@@ -10,7 +10,6 @@ Options:
 [--data-dir|-d] <path>              | Data directory (must be writable).
                                     | Default: data
 [--daemon|-e]                       | Daemonize pstat
-[--redis|-r] <redis host[:port]>    | Redis host[:port]
 [--dump-timeline|-C]                | Enable timeline dump.
 [--pid|-G] <path>                   | Pid file path
 [--kill|-k]                         | Kill Daemon
