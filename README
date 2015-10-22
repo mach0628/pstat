@@ -1,0 +1,33 @@
+# nstat
+monitor network,record packet base ports or ip address. this software need libpcap.
+Usage:
+  pstat64 [-f <defaults file>] [-i <local nets>] [-d <data dir>] [-e] [-g <core>] [-n mode] [-i <iface|pcap file>]  [-d <path>] 
+         [-r <redis>] [-v] [-x ] [-C] [-p] [-w] [-B <filter>] [-A <mode>] [-c <ip>] [-s <length>]
+
+Options:
+[--interface|-i] <interface|pcap>   | Input interface name (numeric/symbolic)
+                                    | or pcap file path
+[--data-dir|-d] <path>              | Data directory (must be writable).
+                                    | Default: data
+[--daemon|-e]                       | Daemonize pstat
+[--redis|-r] <redis host[:port]>    | Redis host[:port]
+[--dump-timeline|-C]                | Enable timeline dump.
+[--pid|-G] <path>                   | Pid file path
+[--kill|-k]                         | Kill Daemon
+[--packet-filter|-B] <filter>       | Ingress packet filter (BPF filter)
+[--snaplen|-s] <capture length>     | capture length,if length less then 1,set to 128(default:128)
+[--output-mode|-A] <mode>           | Setup data output mode:
+                                    | bit 0(1) - set 1 to Enable detail file output(default 1)
+                                    | bit 1(2) - set 1 to Enable minute sum output(default 0)
+                                    | bit 2(4) - set 1 to Enable raw data output(default 0)
+[--local-networks|-m] <local nets>  | Local net ip (default: 192.168.1.2)
+[--filter-ip|-c] <ip address>       | add ip to be ingored,16 max can be added
+[--host-mode|-w]                    | treat filter ip to C class net(default no)
+[--filter-port|-p]                  | add port into list to be watch,16 max can be added
+[--block-mode|-n]                   | how to used port and ip list, block mod is 1, pass mode is 0:
+                                    | bit 0(1) - port list  mode (default 0 )
+                                    | bit 1(2) - ip list  mode (default 1)
+[--rid-line|-x] <mode>              | set to 1 to get rid of lines in content(default 0)
+[--defaults-file|-f] <file name>    | Use the specified defaults file
+[--verbose|-v]                      | Verbose tracing
+[--help|-h]                         | Help
