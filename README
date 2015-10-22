@@ -2,7 +2,7 @@
 monitor network,record packet base ports or ip address. this software need libpcap.
 Usage:
   pstat [-f <defaults file>] [-i <local nets>] [-d <data dir>] [-e] [-g <core>] [-n mode] [-i <iface|pcap file>]  [-d <path>] 
-         [-r <redis>] [-v] [-x ] [-C] [-p] [-w] [-B <filter>] [-A <mode>] [-c <ip>] [-s <length>]
+         [-v] [-x ] [-C] [-p] [-w] [-B <filter>] [-A <mode>] [-c <ip>] [-s <length>]
 
 Options:
 [--interface|-i] <interface|pcap>   | Input interface name (numeric/symbolic)
